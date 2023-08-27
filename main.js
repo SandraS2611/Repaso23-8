@@ -20,16 +20,13 @@ miNuevaVariable = 12;
 console.log(miNuevaVariable);
 console.log(typeof miNuevaVariable);
 
-<<<<<<< Updated upstream
 //Symbol
 console.log(Symbol());
 console.log(typeof Symbol());
 console.log(Symbol() == Symbol());
 
 //Tipos de datos Compuestos
-=======
 //constantes
->>>>>>> Stashed changes
 
 const miNuevaConstante = "Hola mundo2";
 console.log(miNuevaConstante);
@@ -120,3 +117,12 @@ apellido: "Sanchez",
 
 miArray.push(10);
 console.log(miArray);
+
+//definir varias variables
+let num1 = 10, num2 = 12;
+console.log(num1, num2, "concateno");
+
+let num3, num4; 
+num3 = 20, 
+num4 = 5;
+console.log(num3, num4);
