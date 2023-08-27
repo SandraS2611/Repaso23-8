@@ -9,7 +9,7 @@ console.log(typeof 1234);
 //bigint
 console.log(typeof 2374598745897698457567567n);
 
-//booleanos
+//booleans
 console.log(typeof true);
 console.log(typeof false);
 console.log(false == true);
@@ -34,7 +34,7 @@ console.log(null === undefined);
 console.log(Symbol());
 console.log(typeof Symbol());
 console.log(Symbol() == Symbol());
-
+//////////////////////////////////////////////////////////
 //Tipos de datos Compuestos
 
 //array
