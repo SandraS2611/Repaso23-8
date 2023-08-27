@@ -1,13 +1,10 @@
-//Tipos de datos Primitivos
+//variables
 
-//strings
-console.log(typeof "Sandra Sanchez");
+let miNuevaVariable = "Hola mundo";
 
-//number
-console.log(typeof 1234);
+console.log(miNuevaVariable);
 
-//bigint
-console.log(typeof 2374598745897698457567567n);
+miNuevaVariable = "Chau mundo";
 
 //booleanos
 console.log(typeof true);
@@ -18,41 +15,108 @@ console.log(1 == 1);
 console.log(1 > 1);
 console.log(2 > 1);
 
-//null
-console.log(null);
-console.log(typeof null);
-console.log(null == 1);
-console.log(null == null);
+miNuevaVariable = 12;
 
-//undefined
-console.log(undefined);
-console.log(typeof undefined);
-console.log(null == undefined);
-console.log(null === undefined);
+console.log(miNuevaVariable);
+console.log(typeof miNuevaVariable);
 
+<<<<<<< Updated upstream
 //Symbol
 console.log(Symbol());
 console.log(typeof Symbol());
 console.log(Symbol() == Symbol());
 
 //Tipos de datos Compuestos
+=======
+//constantes
+>>>>>>> Stashed changes
 
-//array
-console.log(typeof ["hola", "chau", false, true, 1234, 12n, Symbol()]);
-console.log(["hola", true, 1234, 12n, Symbol()][0]);
-console.log(["hola", true, 1234, 12n, Symbol()][1]);
-console.log(["hola", true, 1234, 12n, Symbol()][2]);
-console.log(["hola", true, 1234, 12n, Symbol()][3]);
-console.log(["hola", true, 1234, 12n, Symbol()][4]);
-console.log(["hola", true, 1234, 12n, Symbol()][5]);
+const miNuevaConstante = "Hola mundo2";
+console.log(miNuevaConstante);
 
-//objetos
-console.log({
-  nombre: "Sandra",
-  apellido: "Sanchez",
-}.apellido);
+//Guardar todos los tipos de datos en variables
+let money = 1000;
 
-console.log({
-    nombre: "Sandra",
-    apellido: "Sanchez",
-  }.nombre);
+console.log(money);
+console.log(money);
+
+money = 900;
+
+console.log(money);
+console.log(money);
+
+money = money - 100;
+
+console.log(money);
+console.log(money);
+
+money = money * 100;
+
+console.log(money);
+console.log(money);
+
+money = money / 100;
+
+console.log(money);
+console.log(money);
+
+money = (money / 100) * 2;
+
+console.log(money);
+console.log(money);
+
+money = (money / 100) * 2;
+
+console.log(money);
+console.log(money);
+
+let dinero = 1000;
+let price = 100;
+
+dinero = dinero - price;
+console.log(dinero);
+
+dinero = dinero - price;
+console.log(dinero);
+
+dinero = dinero - price;
+console.log(dinero);
+
+dinero = dinero - price;
+console.log(dinero);
+
+dinero = dinero - price;
+console.log(dinero);
+
+// let miVariable; //esta definida pero no tiene valor
+// console.log(miVariable);
+
+//  let miVariable = null;
+//  console.log(miVariable);
+
+// let miVariable = Symbol;
+ //console.log(miVariable);
+
+ let miObjeto = {
+nombre: "Sandra",
+apellido: "Sanchez",
+ };
+
+ console.log(miObjeto);
+
+ console.log(miObjeto.nombre);
+
+ console.log(miObjeto.apellido);
+ 
+ let miArray = ["Lohana", "Alexis", 42, true];
+
+ console.log(miArray[0]);
+ console.log(miArray[1]);
+ console.log(miArray[2]);
+ console.log(miArray[3]);
+ console.log(miArray[4]);
+
+ console.log(miArray);
+
+miArray.push(10);
+console.log(miArray);
