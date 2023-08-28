@@ -1,98 +1,51 @@
-// // let miName =prompt("Introduce un nombre")
+// const request = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+// const data = await request.json()
+// console.log(data);
 
-// // function saludar (name) {
-// //     console.log("hola", name);
-// // }
-// // saludar(miName)
-// function saludar (name, callback) {
-//     console.log("Hola", name);
-//     callback(name)
+// async function fetchToJSONplaceholder () {
+//   const request = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+// const data = await request.json()
+// //console.log(data);
+// return data;
 // }
+//fetchToJSONplaceholder()//lo mas adecuado guarda en una funcion siempre
 
-// // function miOtraFuncion() {
-// //     console.log("Chau mundo");
+// const info = await fetchToJSONplaceholder()
+// console.log(info);
+// info.completed = true
+// console.log(info);
 
-// // saludar("1", miOtraFuncion)
-// // saludar("2", miOtraFuncion)
-// // saludar("3", miOtraFuncion)
-// // saludar("4", miOtraFuncion)
-// // saludar("5", miOtraFuncion)
-// // saludar("6", miOtraFuncion) no es  la forma normal de hacerlo
+//fetch("")//funcion q lleva dentro una url
 
-// // saludar ("1", function() {
-// //     console.log("chau mundo");
-// // }) la mas utilizadad pero...
+/////SI NO FUNCIONA USAMOS TRY Y CATCH
 
-// //Funcion de Flecha
-// // saludar("1", ()=> {
-// //     console.log("Chau Mundo");
-// // })
+// async function fetchToJSONplaceholder () {
+//   try { 
+//     const request = await fetch("https://jsonplaceholder.typicode.com/todos/1")
+//     const data = await request.json()
+//     return data;
+//   } catch (error) {
+// console.log("hubo un error", error)
+//   }
+//   }
 
-// const funcion = (name) => {
-//     console.log("Chau Mundo", name);
-// }
+//  fetchToJSONplaceholder()
+//  .then((info) => {
+//   console.log(info);
+//  })
+////////////////////////////////////////////////////////
+ fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then((res) => res.json())
+.then((data) => {
+  console.log(data);
+  })
+//forma mas comun
 
-// saludar("1", funcion)
-console.log("Mensaje1");
+//peculiaridad
+//const miFuncion = () => null //retorna de forma implicita
 
-// const miPromesa = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve("Mensaje2")
-// }, 3000)
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+// .then(res =>(res.ok ? res.json() : Promise.reject(res)))
+// .then((data) => {//mejor forma de trabajar(profesional)
+//   console.log(data);
 // })
-
-const miPromesa = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject("mensaje2") //resolve cambio y da error se resuelve mas abajo
-  }, 2000)
-})
-
-// miPromesa
-// .then((res) => {
-//   console.log(res);
-// })
-// .catch((error) => {
-//     console.log("hubo un error");
-// })
-
-// miPromesa
-// .then((res) => {
-//   console.log(res);
-// })
-// .catch((error) => {
-//     console.error(error);//yo manejo el error no me lo devuelve js
-// })
-
-// .finally(() => {
-//     console.log("Hola");
-// })//casos de uso ejemplo: lowder pare.
-
-//funciona cuando estoy en eltop level
-//TOP LEVEL AWAIT
-
-// const res = await miPromesa
-// console.log(res);
-
-async function miFuncionAsincrona () {// funcion normal
-    const res = await miPromesa
-    console.log(res);
-}
-
-miFuncionAsincrona()
-
-const miFuncionAsincrona2 = async () => {//solucionado "" porq da error pero controlado
-   try {//detecta si hay un error
-    const res = await miPromesa
-    console.log(res)
-   } catch (error) {//lo captura
-    console.error(error)
-}   finally {
-    console.log("holu");
-}
- }
-   
-
-miFuncionAsincrona2()
-
-console.log("Mensaje3");
-
