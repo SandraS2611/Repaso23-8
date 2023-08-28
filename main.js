@@ -1,122 +1,254 @@
-//variables
+//Estructuras de control de Flujo Condicionales
 
-let miNuevaVariable = "Hola mundo";
+if (3 > 4) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-console.log(miNuevaVariable);
+if (3 > 3) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-miNuevaVariable = "Chau mundo";
+if (3 >= 2) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-//booleanos
-console.log(typeof true);
-console.log(typeof false);
-console.log(false == true);
-console.log(1 == 2);
-console.log(1 == 1);
-console.log(1 > 1);
-console.log(2 > 1);
+if (3 >= 3) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-miNuevaVariable = 12;
+if (4 >= 3) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-console.log(miNuevaVariable);
-console.log(typeof miNuevaVariable);
+if (2 >= 3) {
+  //<--- SI, (VERDAD)
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-<<<<<<< Updated upstream
-//Symbol
-console.log(Symbol());
-console.log(typeof Symbol());
-console.log(Symbol() == Symbol());
+//o - or = ||
+if (3 == 4 || 4 > 3) {
+  //<--- || = o , or
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-//Tipos de datos Compuestos
-=======
-//constantes
->>>>>>> Stashed changes
+// y - and = &&
+if (3 == 4 && 4 > 3) {
+  //<--- && = y, and
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-const miNuevaConstante = "Hola mundo2";
-console.log(miNuevaConstante);
+//not = !
+console.log(3 == 4);
+console.log(!(3 == 4));
 
-//Guardar todos los tipos de datos en variables
-let money = 1000;
+if (!(3 == 4)) {
+  // <--- NOT = !
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-console.log(money);
-console.log(money);
+if (!(3 == 3)) {
+  // <--- NOT = !
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-money = 900;
+if (!!(3 == 4)) {
+  // <--- NOT = !
+  console.log("VERDADERO");
+} else {
+  // <--- NO, (FALSEDAD)
+  console.log("FALSO");
+}
 
-console.log(money);
-console.log(money);
+if (!(3 == 3)) {
+  // <--- NOT = !
+  console.log("CASO IF");
+} else if (3 == 2) {
+  // <--- NO, (FALSEDAD)
+  console.log("CASO ELSE IF");
+} else {
+  console.log("CASO POR DEFECTO");
+}
+//////////////////////////////////////////////////////////
+let condicion = 5; // CAMBIAR LOS VALORES( 13, 10,ETC)
 
-money = money - 100;
+if (condicion > 12) {
+  console.log("CASO IF");
+} else if (condicion > 9) {
+  console.log("CASO ELSE IF");
+} else if (condicion > 7) {
+  console.log("CASO ELSE IF2");
+} else {
+  console.log("CASO POR DEFECTO");
+}
 
-console.log(money);
-console.log(money);
+//////////////////////////////////////////////////////
+//CALCULADORA SENCILLA
+let num1 = 10;
+let num2 = 5;
 
-money = money * 100;
+let operacion = "suma";
 
-console.log(money);
-console.log(money);
+if (operacion == "suma") {
+  console.log(num1 + num2);
+} else if (operacion == "resta") {
+  console.log(num1 - num2);
+} else if (operacion == "multiplicacion") {
+  console.log(num1 * num2);
+} else if (operacion == "division") {
+  console.log(num1 / num2);
+} else {
+  console.log("Operacion no valida");
+}
+///////////////////////////////////////////////////////
+let valor = 3;
 
-money = money / 100;
+switch (valor) {
+  case 1:
+    console.log("valor es igual a 1");
+    break;
+  case 2:
+    console.log("valor es igual a 2");
+    break;
+  default:
+    console.log("Operacion no valida");
+    break;
+}
 
-console.log(money);
-console.log(money);
+switch (operacion) {
+  case "suma":
+    console.log(num1 + num2);
+    break;
+  case "resta":
+    console.log(num1 - num2);
+    break;
+  case "multiplicacion":
+    console.log(num1 * num2);
+    break;
+  case "division":
+    console.log(num1 / num2);
+    break;
+  default:
+    console.log("Operacion no valida");
+    break;
+}
 
-money = (money / 100) * 2;
+// var cualquierCosa = "hola";
+// if (true) {
+//   var cualquierCosa = "chau";
+//   console.log(cualquierCosa);
+// }
 
-console.log(money);
-console.log(money);
+// console.log(cualquierCosa);
 
-money = (money / 100) * 2;
+let cualquierCosa = "hola";
+if (true) {
+  let cualquierCosa = "chau";
+  console.log(cualquierCosa);
+}
 
-console.log(money);
-console.log(money);
+console.log(cualquierCosa);
+////////////////////////////////////////////////////
 
-let dinero = 1000;
-let price = 100;
+// let iterador = 0
+// while (iterador < 10) {
+//     console.log("hola mundo");  // crea un bucle infinito
+//     iterador++;// es lo mismo q = + 1
+// }
 
-dinero = dinero - price;
-console.log(dinero);
+// let iterador = 0
+// while (iterador < 5) {
+//     console.log("hola mundo");  // crea un bucle infinito
+//     iterador++;// es lo mismo q = + 1
+// }
 
-dinero = dinero - price;
-console.log(dinero);
+// let iterador = 0;
 
-dinero = dinero - price;
-console.log(dinero);
+// let miArray = ["Chau", "Hello", "Bye", "Hi"];
+// console.log(miArray.length);
 
-dinero = dinero - price;
-console.log(dinero);
+// while (iterador < miArray.length) {
+//   console.log(miArray[iterador]);
+//   iterador++; // es lo mismo q = + 1
+// }
 
-dinero = dinero - price;
-console.log(dinero);
+// let whileIterador = 0;
 
-// let miVariable; //esta definida pero no tiene valor
-// console.log(miVariable);
+//let miArray2 = ["Chau", "Hello", "Bye", "Hi"];
+//console.log(miArray2.length);
 
-//  let miVariable = null;
-//  console.log(miVariable);
+// while (whileIterador < miArray2.length) {
+//   console.log(miArray2[whileIterador]);
+//   whileIterador++; // es lo mismo q = + 1
+// }
 
-// let miVariable = Symbol;
- //console.log(miVariable);
+while (false) {
+  console.log("hello while");
+}
 
- let miObjeto = {
-nombre: "Sandra",
-apellido: "Sanchez",
- };
+let miArray2 = ["Chau", "Hello", "Bye", "Hi", "Log"];
+console.log(miArray2.length);
+///////////////////////////////////////////////////////////
+let i = 0;
 
- console.log(miObjeto);
+do {
+  console.log(miArray2[i]);
+  i++;
+} while (i < miArray2.length);
 
- console.log(miObjeto.nombre);
+////////////////////////////////////////////////////////
+for (let i = 0; i < miArray2.length; i++) {
+  //console.log("Bucle for: ", miArray2[i]);
+  console.log("for ", i);
+}
+///////////////////////////////////////////////////////
+if (3 == 3) {
+  true;
+} else {
+  false;
+} // NO DEVUELVE NADA PORQ ESTA DECLARANDO
 
- console.log(miObjeto.apellido);
- 
- let miArray = ["Lohana", "Alexis", 42, true];
+//----TERNARIA (? Y DECLARAR VALORES EN BASE A UNA COND)------
 
- console.log(miArray[0]);
- console.log(miArray[1]);
- console.log(miArray[2]);
- console.log(miArray[3]);
- console.log(miArray[4]);
+// let miVariable = 3 == 3 ? "Hola" : "Chau";
+//    console.log(miVariable);
 
- console.log(miArray);
+//    let miVariable = 3 == 4 ? "Hola" : "Chau";
+//    console.log(miVariable);
 
-miArray.push(10);
-console.log(miArray);
+// console.log(3 == 4 ? "Hola" : "Chau");
+console.log(3 == 3 ? "Hola" : "Chau");
