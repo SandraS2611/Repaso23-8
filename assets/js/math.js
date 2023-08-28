@@ -1,4 +1,6 @@
-function calculadora({ operacion, num1, num2 }) {// {} = define un objeto de argumento
+import { saludar } from "./cualquiera.js";
+
+export function calculadora({ operacion, num1, num2 }) {// {} = define un objeto de argumento
     if (operacion == "suma") {
       return num1 + num2;
     } 
@@ -16,11 +18,5 @@ function calculadora({ operacion, num1, num2 }) {// {} = define un objeto de arg
     } 
       return "Operacion no valida";
     }
-  
-  let miVariable = calculadora({//VOID = no retorna nada
-    operacion: "multiplicacion",
-    num1: 20,
-    num2: 10,
-  })
 
- console.log(miVariable);
+saludar();
